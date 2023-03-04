@@ -17,7 +17,6 @@ public partial class DrugShopContext : DbContext
 
     public virtual DbSet<Order> Orders { get; set; }
 
-    public virtual DbSet<Payment> Payments { get; set; }
 
     public virtual DbSet<PaymentType> PaymentTypes { get; set; }
 
@@ -55,12 +54,6 @@ public partial class DrugShopContext : DbContext
                 .HasConstraintName("FK_Orders_Users");
         });
 
-        modelBuilder.Entity<Payment>(entity =>
-        {
-            entity.HasIndex(e => e.OrderId, "IX_Payments_OrderId");
-
-            entity.HasOne(d => d.Order).WithMany(p => p.Payments).HasForeignKey(d => d.OrderId);
-        });
 
         modelBuilder.Entity<PaymentType>(entity =>
         {

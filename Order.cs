@@ -19,7 +19,7 @@ public partial class Order
 
     public virtual PaymentType PaymentType { get; set; } = null!;
 
-    public virtual ICollection<Payment> Payments { get; } = new List<Payment>();
+   
 
     public virtual ShipType ShipTypeNavigation { get; set; } = null!;
 

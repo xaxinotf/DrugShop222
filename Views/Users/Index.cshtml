@@ -30,9 +30,11 @@
             <th>
                 @Html.DisplayNameFor(model => model.Homeaddress)
             </th>
+            <!--
             <th>
                 @Html.DisplayNameFor(model => model.OrderId)
             </th>
+            -->
             <th></th>
         </tr>
     </thead>
@@ -57,9 +59,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Homeaddress)
             </td>
+            <!--
             <td>
                 @Html.DisplayFor(modelItem => item.OrderId)
             </td>
+            -->
             <td>
                 <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
